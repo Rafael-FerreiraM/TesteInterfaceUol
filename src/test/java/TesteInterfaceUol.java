@@ -6,6 +6,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TesteInterfaceUol {
 
+      private WebDriver driver;
+      private static final String baseURL = "https://www.uol.com.br";
+
+    
     @Test
     @DisplayName("Quando eu acessar a página inicial, Então deve aparecer o título 'Expulsos por obras esperam há 6 anos água da transposição na PB'")
     public void quandoAcessarHomePage_EntaoDeveAparecerOTitulo() {
