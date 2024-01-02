@@ -16,7 +16,7 @@ public class TesteInterfaceUol {
 
         String tituloEsperado = "Expulsos por obras esperam há 6 anos água da transposição na PB";
 
-        WebDriver navegador = new ChromeDriver();
+      
         UolHomePage uolHomePage = new UolHomePage(navegador);
 
         uolHomePage.abrirPaginaInicial();
@@ -26,6 +26,18 @@ public class TesteInterfaceUol {
 
         assertEquals(tituloClickado, tituloEsperado);
 
-        navegador.quit();
+     
     }
+
+      @BeforeAll
+      public void setup (){
+            driver = new ChromeDriver();
+            driver.manage().timeouts().implicitWait(Duration.ofMillis(10));
+      }
+
+      @AfterAll
+      public void tearDown(){
+            driver.close();
+            
+      }
 }
