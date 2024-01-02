@@ -8,11 +8,6 @@ import org.openqa.selenium.WebElement;
         // Localizadores (locators) dos elementos na página
         private By titleLocator = By.cssSelector("#lqt68sn8");
 
-        // Construtor da classe
-        public UolHomePage(WebDriver driver) {
-            this.driver = driver;
-        }
-
         // Métodos para interagir com a página
 
         public void abrirPaginaInicial() {
