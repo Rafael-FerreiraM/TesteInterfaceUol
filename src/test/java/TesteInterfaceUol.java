@@ -11,18 +11,18 @@ public class TesteInterfaceUol {
 
     
     @Test
-    @DisplayName("Quando eu acessar a página inicial, Então deve aparecer o título 'Expulsos por obras esperam há 6 anos água da transposição na PB'")
+    @DisplayName("Quando eu acessar a página inicial, Então deve aparecer o título esperado")
     public void quandoAcessarHomePage_EntaoDeveAparecerOTitulo() {
 
+        homePage = new UolHomePage();
+          
         String tituloEsperado = "Expulsos por obras esperam há 6 anos água da transposição na PB";
-
+          
+        driver.get(baseURL);  
       
-        UolHomePage uolHomePage = new UolHomePage(navegador);
+      
 
-        uolHomePage.abrirPaginaInicial();
-        uolHomePage.clicarNoTitulo();
-
-        String tituloClickado = uolHomePage.obterTitulo();
+        String tituloClickado = 
 
         assertEquals(tituloClickado, tituloEsperado);
 
