@@ -16,7 +16,7 @@ public class TesteInterfaceUol {
 
     
     @Test
-    @DisplayName("Quando eu acessar a página inicial, Então deve aparecer o título esperado")
+    @DisplayName("Quando acessar a Home Page, Então deve aparecer o título esperado")
     public void quandoAcessarHomePage_EntaoDeveAparecerOTitulo() {
 
         //Entrar no site Uol
@@ -26,7 +26,7 @@ public class TesteInterfaceUol {
         home = new UolHomePage(driver);
 
         //Clicar no título da notícia
-        home.
+        home.clicarNoTitulo();
               
         //Titulo esperado a ser encontrado
         String tituloEsperado = "Expulsos por obras esperam há 6 anos água da transposição na PB";
