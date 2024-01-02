@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 
     public class UolHomePage {
 
-        private WebDriver driver;
 
         // Localizadores (locators) dos elementos na página
         private By titleLocator = By.cssSelector("#lqt68sn8");
