@@ -4,25 +4,20 @@ import org.openqa.selenium.WebElement;
 
     public class UolHomePage {
 
+        private WebDriver driver;
 
-        // Localizadores (locators) dos elementos na página
-        private By titleLocator = By.cssSelector("#lqt68sn8");
+        // Localizador do elements na página
+        private By tituloNoticia = By.cssSelector("#lqt68sn8");
 
-        // Métodos para interagir com a página
-
-        public void abrirPaginaInicial() {
-            driver.get("https://www.uol.com.br/");
-            driver.manage().window().maximize();
-        }
-
+        // Clicar no titulo para redirecionar para a página da notícia
         public void clicarNoTitulo() {
-            WebElement title = driver.findElement(titleLocator);
-            title.click();
+           driver.findElement(tituloNoticia).click();
         }
 
-        public String obterTitulo() {
-            WebElement title = driver.findElement(titleLocator);
-            return title.getText();
+            //Construtor
+            public UolHomePage (WebDriver driver){
+                this.driver = driver;
+                }
         }
     }
 
